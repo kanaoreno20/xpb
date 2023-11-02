@@ -1,0 +1,34 @@
+<h1>割り勘アプリ</h1>
+
+<h2></h2>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import PySimpleGUI as sg</li>
+    <li style="background-color:#EEF;">sg.theme("DarkBrown3")</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">layout = [[sg.T("金額と人数を入力してください。")],</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[sg.T("金額"),sg.I("1000", k="in1")],</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[sg.T("人数"),sg.I("4", k="in2")],</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[sg.B(" 実行 ", k="btn"), sg.T(k="txt")]]</li>
+    <li style="background-color:#EEF;">win = sg.Window("割り勘アプリ", layout,</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font=(None,14), size=(320,150))</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">def execute():</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;in1 = int(v["in1"])</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;in2 = int(v["in2"])</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;txt = f"1人、{in1 / in2 :.2f}円です。"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;win["txt"].update(txt)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">while True:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;e, v = win.read()</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if e == "btn":</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;execute()</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if e == None:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EFF;">win.close()</li>
+    </ol></code>
+
+    <h3>実際に使用している様子</h3>
+ <a href="https://youtu.be/UYB5lwInKzY?si=Z0FpY-EwueW8qFo4">こちらから</a>   
+
+
